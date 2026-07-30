@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AI-powered tool that detects fake and fraudulent job postings using machine learning. Protect yourself from job scams instantly." />
+  <title>FraudGuard — AI Fake Job Detector</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>" />
+</head>
+<body>
+
+  <!-- Decorative background layers -->
+  <div class="bg-gradient"></div>
+  <div class="bg-grid"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <div class="wrapper">
+
+    <!-- ── Header ─────────────────────────────────────────────────────── -->
+    <header>
+      <div class="header-badge">
+        <span class="dot"></span>
+        AI-Powered Detection
+      </div>
+
+      <h1>FraudGuard<br/>Job Scam Detector</h1>
+
+      <p class="header-sub">
+        Paste any job posting details below and our ML model will instantly
+        flag fraudulent listings — protecting job seekers from scams.
+      </p>
+
+      <div class="header-stats">
+        <div class="stat">
+          <span class="stat-value">96%</span>
+          <span class="stat-label">Accuracy</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">8 835</span>
+          <span class="stat-label">Jobs Trained On</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">TF-IDF</span>
+          <span class="stat-label">Vectoriser</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">LogReg</span>
+          <span class="stat-label">Classifier</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ── Input Card ──────────────────────────────────────────────────── -->
+    <div class="card">
+      <form id="jobForm" novalidate>
+
+        <div class="form-grid">
+
+          <!-- Job Title -->
+          <div class="form-group">
+            <label for="titleInput">
+              <span class="icon">💼</span> Job Title
+            </label>
+            <input
+              type="text"
+              id="titleInput"
+              name="title"
+              placeholder="e.g. Software Engineer — Backend"
+              autocomplete="off"
+            />
+          </div>
+
+          <!-- Location -->
+          <div class="form-group">
+            <label for="locationInput">
+              <span class="icon">📍</span> Location
+            </label>
+            <input
+              type="text"
+              id="locationInput"
+              name="location"
+              placeholder="e.g. US, CA, San Francisco"
+              autocomplete="off"
+            />
+          </div>
+
+          <!-- Description -->
+          <div class="form-group full-width">
+            <label for="descriptionInput">
+              <span class="icon">📄</span> Job Description
+            </label>
+            <textarea
+              id="descriptionInput"
+              name="description"
+              placeholder="Paste the full job description here…"
+            ></textarea>
+          </div>
+
+          <!-- Requirements -->
+          <div class="form-group full-width">
+            <label for="requirementsInput">
+              <span class="icon">✅</span> Requirements
+            </label>
+            <textarea
+              id="requirementsInput"
+              name="requirements"
+              placeholder="Paste the requirements / qualifications here…"
+            ></textarea>
+          </div>
+
+        </div>
+
+        <!-- Analyze button -->
+        <button type="submit" class="btn-analyze" id="btnAnalyze">
+          <div class="spinner" id="spinner"></div>
+          <span class="btn-text" id="btnText">🔍&nbsp; Analyze Job Posting</span>
+        </button>
+
+        <!-- Reset button -->
+        <div style="text-align:center;">
+          <button type="button" class="btn-reset" id="btnReset">
+            ↺ Clear Form
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+    <!-- ── Result Panel ────────────────────────────────────────────────── -->
+    <div id="resultPanel">
+
+      <!-- Verdict banner -->
+      <div class="verdict-banner" id="verdictBanner">
+        <div class="verdict-icon" id="verdictIcon">🚨</div>
+        <div class="verdict-text">
+          <h2 id="verdictHeading">Analyzing…</h2>
+          <p  id="verdictSub"></p>
+        </div>
+      </div>
+
+      <!-- Probability bar -->
+      <div class="prob-section">
+        <div class="prob-header">
+          <span class="prob-title">📊 Fraud Probability</span>
+          <div class="prob-values">
+            <div class="prob-val fake">
+              <span class="pct" id="fakePct">0.0%</span>
+              <span class="lbl">Fake</span>
+            </div>
+            <div class="prob-val legit">
+              <span class="pct" id="legitPct">0.0%</span>
+              <span class="lbl">Legit</span>
+            </div>
+          </div>
+        </div>
+        <div class="prob-bar">
+          <div class="prob-bar-inner fake" id="probBar" style="width:0%"></div>
+        </div>
+        <div class="risk-row">
+          <span class="risk-label">Risk Level:</span>
+          <span class="risk-badge" id="riskBadge">—</span>
+        </div>
+      </div>
+
+      <!-- Red flags (hidden when empty) -->
+      <div class="red-flags-section" id="redFlagsSection" style="display:none;">
+        <h3>🚩 Detected Red Flags</h3>
+        <div id="redFlagsList"></div>
+      </div>
+
+      <!-- Safety tips -->
+      <div class="tips-section">
+        <h3>💡 How to Stay Safe</h3>
+        <div class="tip-item">Research the company independently before applying or sharing personal info.</div>
+        <div class="tip-item">Legitimate employers never ask for upfront payments or training fees.</div>
+        <div class="tip-item">Be sceptical of vague roles with unusually high pay or "no experience needed".</div>
+        <div class="tip-item">Verify the job on the official company website or LinkedIn before proceeding.</div>
+        <div class="tip-item">Never wire money or send gift cards as part of a "job offer".</div>
+      </div>
+
+    </div><!-- end #resultPanel -->
+
+    <!-- ── Sample Jobs ─────────────────────────────────────────────────── -->
+    <div class="samples-section">
+      <p class="samples-title">🧪 Try a Sample Posting</p>
+      <div class="samples-grid" id="samplesGrid"></div>
+    </div>
+
+    <!-- ── How It Works ───────────────────────────────────────────────── -->
+    <div class="how-section">
+      <p class="how-title">⚙️ How It Works</p>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <div class="step-title">Text Cleaning</div>
+          <div class="step-body">Lowercases text, removes URLs, punctuation and extra whitespace.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <div class="step-title">TF-IDF Vectorisation</div>
+          <div class="step-body">Converts cleaned text into a 5,000-feature numeric representation.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <div class="step-title">Logistic Regression</div>
+          <div class="step-body">A balanced-class classifier predicts fraud probability with 96% accuracy.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">4</div>
+          <div class="step-title">Heuristic Layer</div>
+          <div class="step-body">Rule-based red-flag scanner highlights scam keywords for transparency.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Footer ─────────────────────────────────────────────────────── -->
+    <footer>
+      Built with <span>♥</span> for ML Internship &nbsp;·&nbsp;
+      Trained on the EMSCAD dataset &nbsp;·&nbsp;
+      Logistic Regression + TF-IDF
+    </footer>
+
+  </div><!-- end .wrapper -->
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast">
+    <span id="toastMsg"></span>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
