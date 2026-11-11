@@ -3,230 +3,788 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AI-powered tool that detects fake and fraudulent job postings using machine learning. Protect yourself from job scams instantly." />
-  <title>FraudGuard — AI Fake Job Detector</title>
+  <meta name="description" content="InternGuard AI — An Agentic AI-Based Fake Internship Detection and Verification System. Trust is not a guess. Investigate before you apply." />
+  <title>InternGuard AI — Trust is Not a Guess | AI Internship Investigation</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>" />
 </head>
-<body>
+<body class="immersive-theme">
 
-  <!-- Decorative background layers -->
-  <div class="bg-gradient"></div>
-  <div class="bg-grid"></div>
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
-  <div class="orb orb-3"></div>
+  <!-- Ambient Cinematic Lighting Effects -->
+  <div class="ambient-spotlight spotlight-blue-top"></div>
+  <div class="ambient-spotlight spotlight-blue-bottom"></div>
+  <div class="ambient-spotlight spotlight-gold-center"></div>
+  <div class="atmospheric-dust"></div>
 
-  <div class="wrapper">
+  <!-- ── Minimal Cinematic Navigation ──────────────────────────────────── -->
+  <nav class="cinema-nav" aria-label="Main Navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="brand-link">
+        <span class="brand-monogram">IA</span>
+        <span class="brand-name">INTERNGUARD <span class="brand-accent">AI</span></span>
+      </a>
 
-    <!-- ── Header ─────────────────────────────────────────────────────── -->
-    <header>
-      <div class="header-badge">
-        <span class="dot"></span>
-        AI-Powered Detection
+      <div class="nav-menu">
+        <a href="#hero" class="nav-item">Home</a>
+        <a href="#how-it-works" class="nav-item">How It Works</a>
+        <a href="#modules" class="nav-item">Technology</a>
+        <a href="#scanner" class="nav-item">Investigate</a>
+        <a href="#samples" class="nav-item">Sample Bank</a>
       </div>
 
-      <h1>FraudGuard<br/>Job Scam Detector</h1>
+      <div class="nav-right">
+        <div class="system-indicator">
+          <span class="indicator-ping"></span>
+          <span class="indicator-text">AI INVESTIGATION SYSTEM</span>
+        </div>
+        <a href="#scanner" class="nav-action-btn">Investigate Now</a>
+      </div>
+    </div>
+  </nav>
 
-      <p class="header-sub">
-        Paste any job posting details below and our ML model will instantly
-        flag fraudulent listings — protecting job seekers from scams.
-      </p>
+  <main>
 
-      <div class="header-stats">
-        <div class="stat">
-          <span class="stat-value">96%</span>
-          <span class="stat-label">Accuracy</span>
+    <!-- ── Hero Section — The WOW Moment ──────────────────────────────── -->
+    <section class="cinema-hero" id="hero">
+      <!-- Watermark Background Typography -->
+      <div class="watermark-text" aria-hidden="true">INTELLIGENCE</div>
+
+      <div class="hero-container">
+
+        <!-- Top Editorial Label -->
+        <div class="hero-top-tag">
+          <span class="gold-sparkle">✦</span>
+          <span>AUTONOMOUS THREAT VERIFICATION ARCHITECTURE</span>
+          <span class="gold-sparkle">✦</span>
         </div>
-        <div class="stat">
-          <span class="stat-value">8 835</span>
-          <span class="stat-label">Jobs Trained On</span>
+
+        <!-- Main Headline -->
+        <h1 class="hero-headline">
+          TRUST IS NOT<br />
+          <span class="hero-headline-emphasis">A GUESS.</span>
+        </h1>
+
+        <!-- Supporting Headline -->
+        <p class="hero-subheading">Investigate before you apply.</p>
+
+        <!-- Description -->
+        <p class="hero-description">
+          An intelligent internship verification system that combines machine learning,
+          rule-based screening and autonomous AI investigation to uncover suspicious opportunities.
+        </p>
+
+        <!-- Interactive 3D Particle Sphere Canvas Container -->
+        <div class="sphere-viewport" id="sphereViewport">
+          <canvas id="particleSphereCanvas" width="700" height="700" aria-label="Interactive 3D AI Intelligence Particle Sphere"></canvas>
+          <div class="sphere-glow-underlay"></div>
+          <div class="sphere-data-tag tag-left">
+            <span class="tag-coord">CORE // 01</span>
+            <span class="tag-title">TF-IDF NLP ENGINE</span>
+          </div>
+          <div class="sphere-data-tag tag-right">
+            <span class="tag-coord">CORE // 02</span>
+            <span class="tag-title">GROQ LLAMA-3.3 AGENT</span>
+          </div>
         </div>
-        <div class="stat">
-          <span class="stat-value">TF-IDF</span>
-          <span class="stat-label">Vectoriser</span>
+
+        <!-- Prominent Call to Action -->
+        <div class="hero-cta-wrapper">
+          <a href="#scanner" class="btn-cinema-gold" id="btnHeroStart">
+            <span class="btn-laser-sweep"></span>
+            <span class="btn-text-content">
+              <span class="gold-icon">✧</span>
+              <span>START INVESTIGATION</span>
+            </span>
+          </a>
+          <a href="#how-it-works" class="btn-cinema-ghost">
+            <span>Explore Architecture</span>
+            <span class="arrow-down">↓</span>
+          </a>
         </div>
-        <div class="stat">
-          <span class="stat-value">LogReg</span>
-          <span class="stat-label">Classifier</span>
+
+        <!-- Quick Proof Metrics Bar -->
+        <div class="hero-stats-band">
+          <div class="stat-cell">
+            <span class="stat-number">96.0%</span>
+            <span class="stat-desc">Forensic Accuracy</span>
+          </div>
+          <div class="stat-separator">✦</div>
+          <div class="stat-cell">
+            <span class="stat-number">8,835</span>
+            <span class="stat-desc">EMSCAD Trained Postings</span>
+          </div>
+          <div class="stat-separator">✦</div>
+          <div class="stat-cell">
+            <span class="stat-number">4 Tools</span>
+            <span class="stat-desc">Autonomous Agent Verification</span>
+          </div>
+          <div class="stat-separator">✦</div>
+          <div class="stat-cell">
+            <span class="stat-number">Zero-Trust</span>
+            <span class="stat-desc">Evidence-Based Risk Scoring</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── How It Works — Cinematic 3-Stage Section ───────────────────── -->
+    <section class="cinema-section" id="how-it-works">
+      <div class="section-container">
+        <div class="section-badge">
+          <span class="badge-num">01</span>
+          <span>THREE-TIER VERIFICATION ARCHITECTURE</span>
+        </div>
+        <h2 class="editorial-title">How InternGuard AI Works</h2>
+        <p class="editorial-sub">A transparent, multi-stage pipeline designed to separate verified facts from deceptive promises.</p>
+
+        <div class="workflow-grid">
+          <!-- Stage 1 -->
+          <div class="stage-card">
+            <div class="stage-top">
+              <span class="stage-index">01</span>
+              <span class="stage-symbol">📊</span>
+            </div>
+            <h3 class="stage-heading">MACHINE LEARNING</h3>
+            <p class="stage-body">
+              Existing TF-IDF + Logistic Regression model evaluates the internship description against 8,835 real and fake postings, computing a baseline statistical fraud probability.
+            </p>
+            <div class="stage-footer">
+              <span class="stage-tech">5,000 Sparse Features · Balanced Weights</span>
+            </div>
+          </div>
+
+          <!-- Stage 2 -->
+          <div class="stage-card">
+            <div class="stage-top">
+              <span class="stage-index">02</span>
+              <span class="stage-symbol">⚡</span>
+            </div>
+            <h3 class="stage-heading">INTELLIGENT SCREENING</h3>
+            <p class="stage-body">
+              Rule-based checks identify suspicious signals, advance registration fees, equipment deposits, Telegram-only hiring, and unrealistic compensation claims.
+            </p>
+            <div class="stage-footer">
+              <span class="stage-tech">30+ Regex Heuristics · Smart Negation</span>
+            </div>
+          </div>
+
+          <!-- Stage 3 -->
+          <div class="stage-card">
+            <div class="stage-top">
+              <span class="stage-index">03</span>
+              <span class="stage-symbol">🤖</span>
+            </div>
+            <h3 class="stage-heading">AUTONOMOUS INVESTIGATION</h3>
+            <p class="stage-body">
+              The Groq-powered AI agent selects and executes available verification tools, examines their observations and prepares an evidence-based report with zero-mitigation reachability.
+            </p>
+            <div class="stage-footer">
+              <span class="stage-tech">Llama-3.3-70b · ReAct Tool Loop</span>
+            </div>
+          </div>
         </div>
       </div>
-    </header>
+    </section>
 
-    <!-- ── Input Card ──────────────────────────────────────────────────── -->
-    <div class="card">
-      <form id="jobForm" novalidate>
+    <!-- ── Verification Tools — 3D Service Cards ──────────────────────── -->
+    <section class="cinema-section" id="modules">
+      <div class="section-container">
+        <div class="section-badge">
+          <span class="badge-num">02</span>
+          <span>SPECIALIZED FORENSIC INSTRUMENTS</span>
+        </div>
+        <h2 class="editorial-title">The Four Verification Tools</h2>
+        <p class="editorial-sub">Concrete Python tools dispatched by the autonomous investigation agent to audit external entities.</p>
 
-        <div class="form-grid">
-
-          <!-- Job Title -->
-          <div class="form-group">
-            <label for="titleInput">
-              <span class="icon">💼</span> Job Title
-            </label>
-            <input
-              type="text"
-              id="titleInput"
-              name="title"
-              placeholder="e.g. Software Engineer — Backend"
-              autocomplete="off"
-            />
+        <div class="tools-grid">
+          <!-- Tool 1: Email -->
+          <div class="tool-3d-card" id="moduleCardEmail">
+            <div class="tool-card-glow"></div>
+            <div class="tool-card-content">
+              <div class="tool-number">01</div>
+              <div class="tool-header-row">
+                <div class="tool-icon-wrap">✉️</div>
+                <span class="tool-status-pill" id="modStatusEmail">Standby</span>
+              </div>
+              <h3 class="tool-name">EMAIL INTELLIGENCE</h3>
+              <p class="tool-description">
+                Validates RFC 5322 syntax, queries live DNS servers for active MX mail exchanger records, and cross-references known disposable email domains.
+              </p>
+              <div class="tool-findings-box" id="modFindingsEmail">Awaiting investigation telemetry...</div>
+            </div>
           </div>
 
-          <!-- Location -->
-          <div class="form-group">
-            <label for="locationInput">
-              <span class="icon">📍</span> Location
-            </label>
-            <input
-              type="text"
-              id="locationInput"
-              name="location"
-              placeholder="e.g. US, CA, San Francisco"
-              autocomplete="off"
-            />
+          <!-- Tool 2: Payment -->
+          <div class="tool-3d-card" id="moduleCardPayment">
+            <div class="tool-card-glow"></div>
+            <div class="tool-card-content">
+              <div class="tool-number">02</div>
+              <div class="tool-header-row">
+                <div class="tool-icon-wrap">💳</div>
+                <span class="tool-status-pill" id="modStatusPayment">Standby</span>
+              </div>
+              <h3 class="tool-name">PAYMENT DETECTION</h3>
+              <p class="tool-description">
+                Identifies upfront registration fees, training charges, and equipment security deposits while protecting legitimate "no fee" disclaimers.
+              </p>
+              <div class="tool-findings-box" id="modFindingsPayment">Awaiting investigation telemetry...</div>
+            </div>
           </div>
 
-          <!-- Description -->
-          <div class="form-group full-width">
-            <label for="descriptionInput">
-              <span class="icon">📄</span> Job Description
-            </label>
-            <textarea
-              id="descriptionInput"
-              name="description"
-              placeholder="Paste the full job description here…"
-            ></textarea>
+          <!-- Tool 3: Description -->
+          <div class="tool-3d-card" id="moduleCardDesc">
+            <div class="tool-card-glow"></div>
+            <div class="tool-card-content">
+              <div class="tool-number">03</div>
+              <div class="tool-header-row">
+                <div class="tool-icon-wrap">📄</div>
+                <span class="tool-status-pill" id="modStatusDesc">Standby</span>
+              </div>
+              <h3 class="tool-name">DESCRIPTION ANALYSIS</h3>
+              <p class="tool-description">
+                Examines vague responsibilities, unrealistic earnings promises, artificial urgency tactics, and suspicious recruitment language.
+              </p>
+              <div class="tool-findings-box" id="modFindingsDesc">Awaiting investigation telemetry...</div>
+            </div>
           </div>
 
-          <!-- Requirements -->
-          <div class="form-group full-width">
-            <label for="requirementsInput">
-              <span class="icon">✅</span> Requirements
-            </label>
-            <textarea
-              id="requirementsInput"
-              name="requirements"
-              placeholder="Paste the requirements / qualifications here…"
-            ></textarea>
+          <!-- Tool 4: Website -->
+          <div class="tool-3d-card" id="moduleCardWebsite">
+            <div class="tool-card-glow"></div>
+            <div class="tool-card-content">
+              <div class="tool-number">04</div>
+              <div class="tool-header-row">
+                <div class="tool-icon-wrap">🌐</div>
+                <span class="tool-status-pill" id="modStatusWebsite">Standby</span>
+              </div>
+              <h3 class="tool-name">WEBSITE VERIFICATION</h3>
+              <p class="tool-description">
+                Checks website reachability and basic domain signals while enforcing strict Server-Side Request Forgery (SSRF) protection against private IPs.
+              </p>
+              <div class="tool-findings-box" id="modFindingsWebsite">Awaiting investigation telemetry...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Actual Internship Investigation Form ────────────────────────── -->
+    <section class="cinema-section" id="scanner">
+      <div class="section-container">
+        <div class="section-badge">
+          <span class="badge-num">03</span>
+          <span>INTERNSHIP AUDIT CONSOLE</span>
+        </div>
+        <h2 class="editorial-title">Investigate an Opportunity</h2>
+        <p class="editorial-sub">Paste the offer details below. The backend pipeline will verify the posting and synthesize an evidence-backed intelligence report.</p>
+
+        <!-- Glassmorphism Investigation Console -->
+        <div class="investigation-console">
+          <div class="console-topbar">
+            <div class="console-decor">
+              <span class="decor-dot"></span>
+              <span class="decor-dot"></span>
+              <span class="decor-dot"></span>
+            </div>
+            <div class="console-label">
+              <span class="live-dot">●</span>
+              <span>VERIFICATION RUNTIME BUFFER // READY</span>
+            </div>
+            <div class="console-limit">ENVELOPE LIMIT: 1 MB</div>
           </div>
 
+          <form id="jobForm" novalidate class="console-form-body">
+            <div class="fields-grid">
+
+              <!-- Primary 1: Title -->
+              <div class="field-item">
+                <label for="titleInput" class="field-label">
+                  <span class="label-number">01</span>
+                  <span>Internship Title</span>
+                  <span class="required-indicator">*</span>
+                </label>
+                <div class="field-input-shell">
+                  <input
+                    type="text"
+                    id="titleInput"
+                    name="title"
+                    class="cinema-input"
+                    placeholder="e.g. Machine Learning Research Intern"
+                    autocomplete="off"
+                    maxlength="200"
+                  />
+                  <div class="input-focus-line"></div>
+                </div>
+              </div>
+
+              <!-- Primary 2: Location -->
+              <div class="field-item">
+                <label for="locationInput" class="field-label">
+                  <span class="label-number">02</span>
+                  <span>Location</span>
+                </label>
+                <div class="field-input-shell">
+                  <input
+                    type="text"
+                    id="locationInput"
+                    name="location"
+                    class="cinema-input"
+                    placeholder="e.g. Remote / Bengaluru / San Francisco, CA"
+                    autocomplete="off"
+                    maxlength="200"
+                  />
+                  <div class="input-focus-line"></div>
+                </div>
+              </div>
+
+              <!-- Primary 3: Description -->
+              <div class="field-item span-full">
+                <label for="descriptionInput" class="field-label">
+                  <span class="label-number">03</span>
+                  <span>Internship Description & Duties</span>
+                  <span class="required-indicator">*</span>
+                </label>
+                <div class="field-input-shell textarea-shell">
+                  <textarea
+                    id="descriptionInput"
+                    name="description"
+                    class="cinema-textarea"
+                    rows="5"
+                    placeholder="Paste the full job description, offer text, or recruitment email here..."
+                    maxlength="20000"
+                  ></textarea>
+                  <div class="input-focus-line"></div>
+                </div>
+              </div>
+
+              <!-- Primary 4: Requirements -->
+              <div class="field-item span-full">
+                <label for="requirementsInput" class="field-label">
+                  <span class="label-number">04</span>
+                  <span>Requirements & Qualifications</span>
+                </label>
+                <div class="field-input-shell textarea-shell">
+                  <textarea
+                    id="requirementsInput"
+                    name="requirements"
+                    class="cinema-textarea"
+                    rows="3"
+                    placeholder="Paste prerequisites, technical skills, or degrees required..."
+                    maxlength="10000"
+                  ></textarea>
+                  <div class="input-focus-line"></div>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <div class="field-item span-full meta-divider">
+                <span class="meta-tag">✧ OPTIONAL VERIFICATION METADATA (ENHANCES TECHNICAL AUDIT) ✧</span>
+              </div>
+
+              <!-- Optional 1: Company Name -->
+              <div class="field-item">
+                <label for="companyInput" class="field-label">
+                  <span class="label-number">05</span>
+                  <span>Claimed Company Name</span>
+                </label>
+                <div class="field-input-shell">
+                  <input
+                    type="text"
+                    id="companyInput"
+                    name="company_name"
+                    class="cinema-input"
+                    placeholder="e.g. Microsoft Corporation, DataPulse Analytics"
+                    autocomplete="off"
+                    maxlength="200"
+                  />
+                  <div class="input-focus-line"></div>
+                </div>
+              </div>
+
+              <!-- Optional 2: Recruiter Email -->
+              <div class="field-item">
+                <label for="emailInput" class="field-label">
+                  <span class="label-number">06</span>
+                  <span>Recruiter Contact Email</span>
+                </label>
+                <div class="field-input-shell">
+                  <input
+                    type="email"
+                    id="emailInput"
+                    name="contact_email"
+                    class="cinema-input"
+                    placeholder="e.g. hr@company.com (or suspicious public gmail)"
+                    autocomplete="off"
+                    maxlength="320"
+                  />
+                  <div class="input-focus-line"></div>
+                </div>
+              </div>
+
+              <!-- Optional 3: Company Website URL -->
+              <div class="field-item">
+                <label for="websiteInput" class="field-label">
+                  <span class="label-number">07</span>
+                  <span>Company Website URL</span>
+                </label>
+                <div class="field-input-shell">
+                  <input
+                    type="url"
+                    id="websiteInput"
+                    name="company_url"
+                    class="cinema-input"
+                    placeholder="e.g. https://www.company.com"
+                    autocomplete="off"
+                    maxlength="2048"
+                  />
+                  <div class="input-focus-line"></div>
+                </div>
+              </div>
+
+              <!-- Optional 4: Stipend -->
+              <div class="field-item">
+                <label for="stipendInput" class="field-label">
+                  <span class="label-number">08</span>
+                  <span>Stipend / Compensation Terms</span>
+                </label>
+                <div class="field-input-shell">
+                  <input
+                    type="text"
+                    id="stipendInput"
+                    name="stipend"
+                    class="cinema-input"
+                    placeholder="e.g. ₹35,000 / month (or 'Pay ₹500 registration')"
+                    autocomplete="off"
+                    maxlength="200"
+                  />
+                  <div class="input-focus-line"></div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Form Action Buttons -->
+            <div class="form-action-bar">
+              <button type="submit" class="btn-analyze" id="btnAnalyze">
+                <div class="spinner" id="spinner"></div>
+                <span class="btn-text" id="btnText">
+                  <span class="btn-sparkle">✦</span> START INVESTIGATION
+                </span>
+              </button>
+
+              <button type="button" class="btn-reset" id="btnReset" title="Reset all input fields and clear results">
+                <span>↺ Clear Buffer</span>
+              </button>
+            </div>
+          </form>
         </div>
 
-        <!-- Analyze button -->
-        <button type="submit" class="btn-analyze" id="btnAnalyze">
-          <div class="spinner" id="spinner"></div>
-          <span class="btn-text" id="btnText">🔍&nbsp; Analyze Job Posting</span>
-        </button>
+      </div>
+    </section>
 
-        <!-- Reset button -->
-        <div style="text-align:center;">
-          <button type="button" class="btn-reset" id="btnReset">
-            ↺ Clear Form
-          </button>
+    <!-- ── Investigation Experience Loading State ──────────────────────── -->
+    <div id="scanLoadingPanel" class="cinema-loading-overlay" style="display:none;" aria-live="polite">
+      <div class="loading-inner-card">
+        <div class="scan-radar-visual">
+          <div class="radar-scanline"></div>
+          <span class="radar-core-pulse"></span>
         </div>
-
-      </form>
+        <div class="loading-text-stack">
+          <h3>Activating Intelligence System...</h3>
+          <p id="scanPipelineStatus">Dispatching posting to multi-tier verification runtime...</p>
+        </div>
+        <div class="loading-stepper-visual">
+          <span class="step-pill active" id="stepNode1">Ingestion</span>
+          <span class="step-line"></span>
+          <span class="step-pill" id="stepNode2">TF-IDF ML</span>
+          <span class="step-line"></span>
+          <span class="step-pill" id="stepNode3">Heuristics</span>
+          <span class="step-line"></span>
+          <span class="step-pill" id="stepNode4">Agent Tools</span>
+          <span class="step-line"></span>
+          <span class="step-pill" id="stepNode5">Synthesis</span>
+        </div>
+      </div>
     </div>
 
-    <!-- ── Result Panel ────────────────────────────────────────────────── -->
-    <div id="resultPanel">
+    <!-- ── Results — Premium Intelligence Report ───────────────────────── -->
+    <div id="resultPanel" class="cinema-results-dashboard" style="display:none;">
 
-      <!-- Verdict banner -->
-      <div class="verdict-banner" id="verdictBanner">
-        <div class="verdict-icon" id="verdictIcon">🚨</div>
-        <div class="verdict-text">
-          <h2 id="verdictHeading">Analyzing…</h2>
-          <p  id="verdictSub"></p>
+      <div class="results-container">
+
+        <div class="audit-status-tag">
+          <span class="tag-label">VERIFICATION AUDIT COMPLETE</span>
+          <span class="tag-time" id="analysisTimestamp">TIMESTAMP // VERIFIED</span>
         </div>
-      </div>
 
-      <!-- Probability bar -->
-      <div class="prob-section">
-        <div class="prob-header">
-          <span class="prob-title">📊 Fraud Probability</span>
-          <div class="prob-values">
-            <div class="prob-val fake">
-              <span class="pct" id="fakePct">0.0%</span>
-              <span class="lbl">Fake</span>
+        <!-- 1. Executive Verdict Banner -->
+        <div class="verdict-banner" id="verdictBanner">
+          <div class="verdict-icon-container">
+            <div class="verdict-icon" id="verdictIcon">🛡️</div>
+          </div>
+          <div class="verdict-text">
+            <div class="verdict-top-row">
+              <span class="risk-badge" id="riskBadge">—</span>
+              <span class="verdict-tag">Official Multi-Tier Assessment</span>
             </div>
-            <div class="prob-val legit">
-              <span class="pct" id="legitPct">0.0%</span>
-              <span class="lbl">Legit</span>
+            <h2 id="verdictHeading">Assessment Pending</h2>
+            <p id="verdictSub" class="verdict-summary"></p>
+            <div class="verdict-disclaimer">
+              <span>⚖️</span>
+              <em>Synthesized from statistical ML probability, deterministic heuristics, and external DNS/HTTP network signals.</em>
             </div>
           </div>
         </div>
-        <div class="prob-bar">
-          <div class="prob-bar-inner fake" id="probBar" style="width:0%"></div>
-        </div>
-        <div class="risk-row">
-          <span class="risk-label">Risk Level:</span>
-          <span class="risk-badge" id="riskBadge">—</span>
-        </div>
-      </div>
 
-      <!-- Red flags (hidden when empty) -->
-      <div class="red-flags-section" id="redFlagsSection" style="display:none;">
-        <h3>🚩 Detected Red Flags</h3>
-        <div id="redFlagsList"></div>
-      </div>
+        <!-- 2. Final Risk Score & Investigation Telemetry Dashboard -->
+        <div class="dashboard-grid">
 
-      <!-- Safety tips -->
-      <div class="tips-section">
-        <h3>💡 How to Stay Safe</h3>
-        <div class="tip-item">Research the company independently before applying or sharing personal info.</div>
-        <div class="tip-item">Legitimate employers never ask for upfront payments or training fees.</div>
-        <div class="tip-item">Be sceptical of vague roles with unusually high pay or "no experience needed".</div>
-        <div class="tip-item">Verify the job on the official company website or LinkedIn before proceeding.</div>
-        <div class="tip-item">Never wire money or send gift cards as part of a "job offer".</div>
-      </div>
+          <!-- Circular Risk Gauge Card -->
+          <div class="score-card">
+            <div class="card-header-mini">
+              <span class="mini-title">Risk Assessment Index</span>
+              <span class="scale-label">0 (Safe) — 100 (Critical Scam)</span>
+            </div>
+
+            <div class="score-display">
+              <!-- Animated Circular Gauge -->
+              <div class="gauge-wrapper">
+                <svg class="gauge-svg" viewBox="0 0 160 160" width="160" height="160">
+                  <circle class="gauge-track" cx="80" cy="80" r="68"></circle>
+                  <circle class="gauge-fill" id="gaugeCircle" cx="80" cy="80" r="68"></circle>
+                </svg>
+                <div class="gauge-center-stack">
+                  <div class="score-number-wrap">
+                    <span class="score-number" id="riskScoreNum">0</span>
+                    <span class="score-denom">/ 100</span>
+                  </div>
+                  <div class="gauge-caption">RISK SCORE</div>
+                </div>
+              </div>
+
+              <!-- Linear Fallback Bar (Required by tests) -->
+              <div class="score-bar-container">
+                <div class="score-bar-fill" id="riskScoreBar" style="width:0%"></div>
+              </div>
+
+              <div class="score-tiers">
+                <span class="tier tier-safe">0–30 Low Risk</span>
+                <span class="tier tier-suspicious">31–70 Suspicious</span>
+                <span class="tier tier-high">71–100 High Risk</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Autonomous Agent Telemetry Card -->
+          <div class="telemetry-card">
+            <div class="card-header-mini">
+              <span class="mini-title">Autonomous Agent Telemetry</span>
+              <span class="agent-pill" id="agentStatusPill">Agent: Pending</span>
+            </div>
+            <div class="telemetry-body">
+              <p class="telemetry-note" id="agentStatusDesc">Awaiting execution status...</p>
+
+              <div class="telemetry-runtime-spec">
+                <div class="spec-col">
+                  <span class="spec-label">MODEL</span>
+                  <span class="spec-val">Llama-3.3-70b-versatile</span>
+                </div>
+                <div class="spec-col">
+                  <span class="spec-label">EXECUTION MODE</span>
+                  <span class="spec-val">ReAct Tool Calling</span>
+                </div>
+              </div>
+
+              <div class="tools-header">Verification Tools Executed:</div>
+              <div class="tools-list" id="toolsExecutedList">
+                <span class="tool-chip muted">None</span>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- end .dashboard-grid -->
+
+        <!-- 3. Multi-Source Evidence & Score Reconciliation Grid -->
+        <div class="evidence-grid">
+
+          <!-- ML Assessment Card -->
+          <div class="evidence-card">
+            <div class="evidence-card-header">
+              <span class="card-icon">📊</span>
+              <div>
+                <h4>Machine Learning Assessment</h4>
+                <span class="card-sub">Statistical Vocabulary Inference</span>
+              </div>
+            </div>
+            <div class="ml-body">
+              <div class="prob-header">
+                <span class="prob-title">Vocabulary Fraud Probability</span>
+                <div class="prob-values">
+                  <div class="prob-val fake">
+                    <span class="pct" id="fakePct">0.0%</span>
+                    <span class="lbl">Fake</span>
+                  </div>
+                  <div class="prob-val legit">
+                    <span class="pct" id="legitPct">0.0%</span>
+                    <span class="lbl">Legitimate</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="prob-bar">
+                <div class="prob-bar-inner fake" id="probBar" style="width:0%"></div>
+              </div>
+
+              <div class="ml-meta">
+                <div class="ml-meta-item">
+                  <span class="meta-label">ML Score Contribution:</span>
+                  <span class="meta-val" id="mlScoreContribution">0.0 / 20.0 pts</span>
+                </div>
+                <div class="ml-meta-item">
+                  <span class="meta-label">Model Architecture:</span>
+                  <span class="meta-val" id="mlModelArchitecture">TF-IDF + Balanced LogReg</span>
+                </div>
+              </div>
+
+              <p class="ml-disclaimer-note" id="mlDisclaimer">
+                Statistical inference on vocabulary patterns. Does not constitute verified technical proof.
+              </p>
+            </div>
+          </div>
+
+          <!-- Score Breakdown Card -->
+          <div class="evidence-card">
+            <div class="evidence-card-header">
+              <span class="card-icon">🧮</span>
+              <div>
+                <h4>Score Breakdown & Reconciliation</h4>
+                <span class="card-sub">Deterministic Capped Arithmetic</span>
+              </div>
+            </div>
+            <div class="breakdown-body">
+              <div class="calc-summary-box" id="calcSummaryBox">
+                Awaiting calculation reconciliation...
+              </div>
+              <div class="capped-summary-row" id="cappedSummaryRow"></div>
+              <div class="indicators-sublist" id="scoreIndicatorsList"></div>
+            </div>
+          </div>
+
+        </div><!-- end .evidence-grid -->
+
+        <!-- 4. Detailed Forensic Indicators & Observations -->
+        <div class="details-section">
+
+          <!-- Suspicious Indicators -->
+          <div class="detail-card suspicious-card" id="suspiciousCard" style="display:none;">
+            <div class="detail-card-header">
+              <span class="detail-badge red">🚩 Suspicious Indicators & Fraud Signals</span>
+            </div>
+            <div class="detail-list" id="suspiciousList"></div>
+          </div>
+
+          <!-- Rule-Based Heuristic Matches -->
+          <div class="detail-card rules-card" id="rulesCard" style="display:none;">
+            <div class="detail-card-header">
+              <span class="detail-badge amber">⚠️ Deterministic Rule Detections</span>
+            </div>
+            <div class="detail-list" id="rulesList"></div>
+          </div>
+
+          <!-- Forensic Tool Findings -->
+          <div class="detail-card forensic-card" id="forensicCard" style="display:none;">
+            <div class="detail-card-header">
+              <span class="detail-badge purple">🔬 Investigative Agent Findings</span>
+            </div>
+            <div class="detail-list" id="forensicList"></div>
+          </div>
+
+          <!-- Verified Technical Signals -->
+          <div class="detail-card verified-card" id="verifiedCard" style="display:none;">
+            <div class="detail-card-header">
+              <span class="detail-badge green">✓ Verified Technical Observations</span>
+            </div>
+            <p class="section-notice">
+              Technical reachability (HTTP 200, MX records) confirms server communication capability, not employer legitimacy or recruiter authority (0 mitigation points awarded).
+            </p>
+            <div class="detail-list" id="verifiedList"></div>
+          </div>
+
+          <!-- Unverified Items & Limitations -->
+          <div class="detail-card unverified-card" id="unverifiedCard">
+            <div class="detail-card-header">
+              <span class="detail-badge gray">🔍 Unverified Items & Boundary Scope</span>
+            </div>
+            <div class="unverified-split">
+              <div>
+                <div class="subheading-mini">Missing Input Fields:</div>
+                <ul class="bullet-list" id="unverifiedList"></ul>
+              </div>
+              <div>
+                <div class="subheading-mini">System Scope Limitations:</div>
+                <ul class="bullet-list" id="limitationsList"></ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- end .details-section -->
+
+        <!-- 5. Actionable Safety Recommendations -->
+        <div class="recommendations-section" id="recommendationsSection">
+          <div class="rec-header">
+            <span class="rec-icon">🛡️</span>
+            <div>
+              <h3>Actionable Applicant Safety Guidelines</h3>
+              <span class="rec-subtitle">Evidence-based safety protocols for students and applicants</span>
+            </div>
+          </div>
+          <div class="rec-list" id="recommendationsList"></div>
+        </div>
+
+      </div><!-- end .results-container -->
 
     </div><!-- end #resultPanel -->
 
-    <!-- ── Sample Jobs ─────────────────────────────────────────────────── -->
-    <div class="samples-section">
-      <p class="samples-title">🧪 Try a Sample Posting</p>
-      <div class="samples-grid" id="samplesGrid"></div>
-    </div>
+    <!-- ── Sample Internships Benchmark Bank ───────────────────────────── -->
+    <section class="cinema-section" id="samples">
+      <div class="section-container">
+        <div class="section-badge">
+          <span class="badge-num">04</span>
+          <span>BENCHMARK DATA BANK</span>
+        </div>
+        <h2 class="editorial-title">Pre-Configured Scenarios</h2>
+        <p class="editorial-sub">Select any real-world benchmark scenario below to immediately load the console and test the system.</p>
 
-    <!-- ── How It Works ───────────────────────────────────────────────── -->
-    <div class="how-section">
-      <p class="how-title">⚙️ How It Works</p>
-      <div class="steps-grid">
-        <div class="step-card">
-          <div class="step-num">1</div>
-          <div class="step-title">Text Cleaning</div>
-          <div class="step-body">Lowercases text, removes URLs, punctuation and extra whitespace.</div>
+        <div class="samples-grid" id="samplesGrid"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Cinema Footer ─────────────────────────────────────────────────── -->
+  <footer class="cinema-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-brand">INTERNGUARD <span class="brand-accent">AI</span></span>
+        <p class="footer-text">
+          An Agentic AI-Based Fake Internship Detection and Verification System.<br />
+          Trained on the EMSCAD Dataset · Zero-Trust Multi-Tier Architecture.
+        </p>
+      </div>
+      <div class="footer-right">
+        <div class="footer-tags">
+          <span class="f-tag">SSRF Protected</span>
+          <span class="f-tag">RFC 5322 Compliant</span>
+          <span class="f-tag">Groq Llama-3.3 Powered</span>
         </div>
-        <div class="step-card">
-          <div class="step-num">2</div>
-          <div class="step-title">TF-IDF Vectorisation</div>
-          <div class="step-body">Converts cleaned text into a 5,000-feature numeric representation.</div>
-        </div>
-        <div class="step-card">
-          <div class="step-num">3</div>
-          <div class="step-title">Logistic Regression</div>
-          <div class="step-body">A balanced-class classifier predicts fraud probability with 96% accuracy.</div>
-        </div>
-        <div class="step-card">
-          <div class="step-num">4</div>
-          <div class="step-title">Heuristic Layer</div>
-          <div class="step-body">Rule-based red-flag scanner highlights scam keywords for transparency.</div>
-        </div>
+        <span class="footer-copy">&copy; 2026 InternGuard AI · Academic Technology Project</span>
       </div>
     </div>
+  </footer>
 
-    <!-- ── Footer ─────────────────────────────────────────────────────── -->
-    <footer>
-      Built with <span>♥</span> for ML Internship &nbsp;·&nbsp;
-      Trained on the EMSCAD dataset &nbsp;·&nbsp;
-      Logistic Regression + TF-IDF
-    </footer>
-
-  </div><!-- end .wrapper -->
-
-  <!-- Toast notification -->
-  <div class="toast" id="toast">
+  <!-- Toast Notification Modal (Required by tests) -->
+  <div class="toast" id="toast" role="alert" aria-live="assertive">
     <span id="toastMsg"></span>
   </div>
 
